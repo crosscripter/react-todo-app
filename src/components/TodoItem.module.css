@@ -1,0 +1,43 @@
+.TodoItem {
+  border-bottom: var(--item-border); 
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  user-select: none;
+
+  b { width: 23%; }
+  
+  .actionButton {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: calc(var(--pad) / 2);
+    margin: var(--pad);
+    justify-self: flex-end;
+  }
+
+  .checkBox {
+    border: var(--border);
+    padding: var(--pad);
+    margin-right: var(--pad);
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkBox:checked {
+    color: var(--fg);
+    accent-color: var(--cross-green);
+  }
+
+  .actionButton:hover {
+    border: 0;
+    color: var(--fg-hover);
+  }
+
+  .actionButton:hover::after {
+    color: var(--bg-hover);
+    font-weight: normal;
+    content: ' Remove';
+    margin-left: calc(var(--pad) / 2);
+  }
+}

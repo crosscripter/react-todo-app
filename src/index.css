@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --bg: #151515;
+  --bg-hover: #555;
+  --bg-active: #454545;
+  --app-bg: #222;
+  --btn-fg: #ddd;
+  --btn-bg: #444;
+  --cross-green: #34b54a;
+  --btn-hover: var(--cross-green); 
+  --disabled: 0.5;
+  --border: 3px solid #333;
+  --border-active: 3px solid #555;
+  --border-focus: 3px solid var(--cross-green);
+  --btn-border: 4px solid var(--border); 
+  --border-radius: 8px;
+  --font: 'Poppins', sans-serif;
+  --pad: 10px;
+  --fg: #f8f8f8;
+  --fg-hover: #fff;
+  --font-size: 12pt;
+  --item-border: 1px solid #1d1d1d;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  padding: var(--pad);
+  height: 100%;
+  text-rendering: geometricPrecision;
+}
+
+button {
+  /* margin: var(--pad); */
+  padding: var(--pad) calc(var(--pad) * 2);
+  width: fit-content;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-weight: bold;
+  border: var(--border);
+  border-radius: var(--border-radius); 
+  transition: all 0.5s ease-in-out;
+
+  &:not([disabled]):hover { 
+    color: var(--cross-green);
+    border: 3px solid var(--btn-hover); 
+  }
+
+  &:active { background: var(--bg-active); }
+
+  &[disabled] { 
+    cursor: not-allowed; 
+    opacity: var(--disabled); 
+  }
+}
