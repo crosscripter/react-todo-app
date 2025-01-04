@@ -1,13 +1,16 @@
 .App {
-  background: var(--app-bg);
+  height: 90vh;
   margin: var(--pad);
+  background: var(--app-bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
   padding: var(--pad) calc(var(--pad) * 3);
-
+  
   h1 {
-    text-shadow: 5px 5px 1px rgba(0,0,0,0.3);
-    padding-bottom: var(--pad);
     margin-bottom: var(--pad);
+    padding-bottom: var(--pad);
+    text-shadow: 5px 5px 1px rgba(0,0,0,0.3);
+  
+    &::before { content: '✅ '; }
   }
-
-  h1::before { content: '✅ '; }
 }

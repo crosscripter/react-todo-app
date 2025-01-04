@@ -1,19 +1,18 @@
 .TodoInput {
-  padding: var(--pad);
-  font-size: calc(var(--font-size));
-  background: var(--app-bg);
   border: 0;
+  width: 60vw;
   outline: none;
   color: var(--fg);
-  font-family: var(--font);
-  border-bottom: var(--border);
-  transition: all 0.5s;
   font-weight: bold;
   letter-spacing: 1px;
+  padding: var(--pad);
+  transition: all 0.5s;
+  font-family: var(--font);
+  background: var(--app-bg);
+  border-bottom: var(--border);
+  font-size: calc(var(--font-size));
 
-  &:focus {
-    border-bottom: var(--border-focus);
-  }
+  &:focus { border-bottom: var(--border-focus); }
 }
 
 .addButton {

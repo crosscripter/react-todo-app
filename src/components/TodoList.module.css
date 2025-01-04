@@ -1,14 +1,7 @@
 .TodoList {
-  list-style: none;
-  padding: var(--pad);
   margin: 0;
   height: 70vh;
+  list-style: none;
   overflow-y: scroll;
+  padding: var(--pad);
 }
-::-webkit-scrollbar { 
-  width: var(--pad);
-  background-color: var(--bg); 
-}
-::-webkit-scrollbar-button { background-color: var(--app-bg); }
-::-webkit-scrollbar-track { background-color: var(--bg); }
-::-webkit-scrollbar-thumb { background-color: var(--btn-bg); }

@@ -7,6 +7,7 @@ const TodoInput = ({ addTodo }) => {
   const handleSubmit = e => {
     e.preventDefault();
     if (!inputValue) return;
+
     addTodo(inputValue);
     setInputValue('');
   };
@@ -16,13 +17,13 @@ const TodoInput = ({ addTodo }) => {
       <input
         type="text"
         value={inputValue}
+        placeholder="I need to..."
         className={styles.TodoInput}
         onChange={e => setInputValue(e.target.value)}
-        placeholder="I need to..."
       />
       <button 
-        className={styles.addButton} 
         type="submit" 
+        className={styles.addButton} 
         disabled={inputValue.length === 0}>+</button>
     </form>
   );

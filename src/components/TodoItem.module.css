@@ -1,32 +1,33 @@
 .TodoItem {
-  border-bottom: var(--item-border); 
   display: flex;
+  user-select: none;
   align-items: center;
   justify-content: stretch;
-  user-select: none;
+  border-bottom: var(--item-border); 
 
-  b { width: 23%; }
-  
+  b { width: fit-content; }
+
   .actionButton {
-    background: none;
     border: 0;
     cursor: pointer;
-    padding: calc(var(--pad) / 2);
+    background: none;
     margin: var(--pad);
     justify-self: flex-end;
+    padding: calc(var(--pad) / 2);
   }
 
   .checkBox {
-    border: var(--border);
-    padding: var(--pad);
-    margin-right: var(--pad);
     width: 20px;
     height: 20px;
+    padding: var(--pad);
+    border: var(--border);
+    margin-right: var(--pad);
   }
 
   .checkBox:checked {
     color: var(--fg);
     accent-color: var(--cross-green);
+    & + b { color: var(--item-complete); }
   }
 
   .actionButton:hover {
@@ -35,9 +36,9 @@
   }
 
   .actionButton:hover::after {
-    color: var(--bg-hover);
-    font-weight: normal;
     content: ' Remove';
+    font-weight: normal;
+    color: var(--bg-hover);
     margin-left: calc(var(--pad) / 2);
   }
 }
